@@ -1,0 +1,129 @@
+html, body {
+    height: 100%;
+}
+
+html, body, ul, ol, p, h1, h2, h3, h4, h5, h6, div, table, th, td, form, input, select, button, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, fieldset, img, iframe, abbr {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+    font-weight: normal;
+}
+
+del, ins, u, s, a, a:hover {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    background: #fff;
+}
+
+body, h1, h2, h3, h4, h5, h6, input, select {
+    font-size: 16px;
+}
+
+input {
+    font-family: 'Helvetica Neue'
+}
+
+input, select, input:focus, select:focus {
+    /*border: none;*/
+    /*background: none;*/
+    /*outline: none;*/
+}
+
+img {
+    display: inline-block;
+    -ms-interpolation-mode: bicubic;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+a, button, input, textarea, li, div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+i {
+    font-style: normal;
+}
+
+
+/* 隐藏body滚动条 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+*, *:after, *:before {
+    -weblit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="button"],
+input[type="date"],
+input[type="submit"],
+input[type="search"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+.clearFix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+

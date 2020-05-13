@@ -1,0 +1,11 @@
+.tabs-container {
+  margin-left: 5px;
+  height: 40px;
+  overflow: hidden;
+  .el-tabs__header{
+    margin-bottom: 0 !important;
+  }
+  .el-tabs__content {
+    display: none !important;
+  }
+}

@@ -1,0 +1,55 @@
+
+.nav-bar-container {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, .08);
+  margin-bottom: 20px;
+  .toggle-nav-collapse {
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: all 2s;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    &.active {
+      transform: rotate(90deg);
+    }
+  }
+
+  .breadcrumb-container {
+    float: left;
+    line-height: 50px;
+    height: 100%;
+    cursor: pointer;
+    transition: background .3s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .right-container{
+    float: right;
+    margin-right: 30px;
+    .screenfull-icon{
+      font-size: 30px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .right-menu {
+      display: inline-block;
+      overflow: hidden;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+
+
+
+
+}
