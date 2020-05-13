@@ -66,7 +66,7 @@
             </el-form>
             <el-row style="margin-top: 20px">
                 <el-col :span="6" :offset="18">
-                    <el-button type="primary">导出</el-button>
+                    <el-button type="primary" @click="exportExcelTableInfo">导出</el-button>
                     <el-button type="primary">重置</el-button>
                     <el-button type="primary">查询</el-button>
                 </el-col>
@@ -140,7 +140,7 @@
                             :src="url"
                             fit="fill"
                             @click="imgClick"
-                            >
+                    >
                         <div slot="placeholder" class="image-slot">
                             加载中<span class="dot">...</span>
                         </div>
@@ -157,7 +157,7 @@
                 width="30%"
                 class="dialog-container"
                 :before-close="carouselClose">
-            <el-carousel  height="550px">
+            <el-carousel height="550px">
                 <el-carousel-item v-for="(item,index) in srcList" :key="item">
                     <el-image
                             style="width: 100%; height: 100%;background-color: #d3dce6"
@@ -171,12 +171,14 @@
 
 </template>
 <script>
+  import { exportExcel } from "@/utils/global-function";
+
   export default {
     name: "home",
     data() {
       return {
         dialogVisible: false,
-        carouselVisible:false,
+        carouselVisible: false,
         input4: "",
         value1: "",
         value2: "",
@@ -237,11 +239,14 @@
     mounted() {
     },
     methods: {
-      carouselItemClick(index){
-        this.$message(`点击了${index}`)
+      exportExcelTableInfo() {
+        exportExcel(["姓名", "时间", "地址"], ["name", "time", "address"], this.tableData, "用户信息表");
+      },
+      carouselItemClick(index) {
+        this.$message(`点击了${index}`);
       },
       imgClick() {
-            this.carouselVisible = true;
+        this.carouselVisible = true;
       },
       carouselClose() {
         this.carouselVisible = false;
@@ -267,6 +272,7 @@
         }
         return "";
       }
+
     }
   };
 </script>
@@ -291,7 +297,7 @@
         }
     }
 
-    .carousel-container{
+    .carousel-container {
         position: fixed;
         top: 15vh;
         left: 0;
